@@ -411,10 +411,10 @@
                     <tr>
                         <td align="center" style="
 text-align: center;">
-                            {if $mr.id}<a  onclick="javascript:OpenSubWin('{literal}{$site.base_url}{/literal}print_history/print_report/id/{literal}{$mr.id}{/literal}','550','500','1');"  title="Click here to show report history">
-                            <input class="btn" value="Update History" type="button" /></a>&nbsp;&nbsp;&nbsp;<a onclick="javascript:OpenSubWin('{literal}{$site.base_url}{/literal}print_history/print_mail/id/{literal}{$mr.id}{/literal}','550','500','1');" title="Click here to show email history"><input class="btn" value="Email History" type="button" /></a>&nbsp;&nbsp;&nbsp;
-                            <input class="btn" value="Send Email" type="button" onclick="sm_frm(frm,'{literal}{$site.base_url}{/literal}customer/send_email','_self',2)" />
-                            &nbsp;&nbsp;&nbsp;<input class="btn" value="Print" type="button" onclick="sm_frm(frm,'{literal}{$site.base_url}{/literal}customer/r_print/id/{literal}{$mr.id}{/literal}','_blank',1)" />                                 &nbsp;&nbsp;&nbsp;
+                            {if $mr.id}<a  onclick="javascript:OpenSubWin('{$site.base_url}print_history/print_report/id/{$mr.id}','550','500','1');"  title="Click here to show report history">
+                            <input class="btn" value="Update History" type="button" /></a>&nbsp;&nbsp;&nbsp;<a onclick="javascript:OpenSubWin('{$site.base_url}print_history/print_mail/id/{literal}{$mr.id}{/literal}','550','500','1');" title="Click here to show email history"><input class="btn" value="Email History" type="button" /></a>&nbsp;&nbsp;&nbsp;
+                            <input class="btn" value="Send Email" type="button" onclick="sm_frm(frm,'{$site.base_url}customer/send_email','_self',2)" />
+                            &nbsp;&nbsp;&nbsp;<input class="btn" value="Print" type="button" onclick="sm_frm(frm,'{$site.base_url}customer/r_print/id/{$mr.id}','_blank',1)" />                                 &nbsp;&nbsp;&nbsp;
                                 <input tabindex="72" type="submit" class="btn" alt="submit" name="save" value="Submit" />
                             {else}
                                 <input tabindex="73" type="submut" class="btn" />
