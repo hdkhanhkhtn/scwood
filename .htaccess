@@ -1,0 +1,11 @@
+<IfModule !mod_php5.c>
+AddType x-mapp-php5 .php
+</IfModule>
+<IfModule mod_php5.c>
+    php_flag magic_quotes_gpc off
+    php_flag short_open_tag on
+</IfModule>
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php/$1 [L]
